@@ -15,3 +15,11 @@ def recursum(number):
   return number + recursum(number-1)
 number, sum = 6,0
 print(recursum(number))
+
+
+#  3rd & most easy way!!
+
+number,sum = 6,0
+for i in range(number+1):
+  sum+=i
+print(sum)
