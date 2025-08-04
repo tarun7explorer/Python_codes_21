@@ -9,3 +9,15 @@ for i in range(len(arr)):
 print (mini)
 
 # Output - 4
+
+# 2nd method using inbuilt function
+
+arr = [10, 89, 9, 56, 4, 80, 8]
+arr.sort()
+
+print (arr[0])
+
+# 3rd method 
+
+arr = [10, 89, 9, 56, 4, 80, 8]
+print (min(arr))
