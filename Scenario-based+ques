@@ -1,0 +1,29 @@
+1. How would you handle reading a very large file (GBs in size) in Python without running out of memory?
+Use a generator or with open() with iteration line-by-line.
+Avoid reading the entire file into memory at once.
+for line in open("file.txt"): processes stream data.
+yield empowers lazy evaluation.
+
+2. How do you remove duplicates from a list while preserving order?
+Use dict.fromkeys(list) or an ordered loop with a set.
+E.g., list(dict.fromkeys(my_list)).
+Set tracks seen items and avoids repetition.
+Preserves original sequence unlike plain set().
+
+3. Given two lists, how would you efficiently find common elements?
+Convert one/both lists to sets and use intersection.
+E.g., set(list1) & set(list2).
+This gives O(min(n, m)) average case time.
+Faster than nested loops.
+
+4. How would you handle a function that must retry execution on failure up to 3 times?
+Use a for loop with try-except.
+Break on success, otherwise retry.
+Optionally use time.sleep() between retries.
+retrying or tenacity libraries help automate.
+
+5. How do you merge multiple dictionaries in Python 3.9+?
+Use merged = dict1 | dict2 | dict3.
+This creates a new dictionary with merged keys.
+Later keys override earlier ones.
+For older Python, use {**dict1, **dict2, **dict3}.
