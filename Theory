@@ -1,0 +1,29 @@
+1. What are Python’s key features?
+Python is interpreted, high-level, and dynamically typed.
+It supports OOP, functional, and procedural paradigms.
+It has an extensive standard library and community support.
+Platform-independent and easy to learn.
+
+2. What is the difference between deep copy and shallow copy?
+A shallow copy copies object references, not nested objects.
+Deep copy creates independent copies of all objects recursively.
+copy.copy() does shallow copy; copy.deepcopy() deep copy.
+Changes in nested objects affect only shallow copies.
+
+3. What is Python’s GIL (Global Interpreter Lock)?
+GIL allows only one thread to execute Python bytecode at a time.
+It prevents race conditions in CPython’s memory management.
+It affects multi-threading performance for CPU-bound tasks.
+I/O-bound tasks are less impacted.
+
+4. What is the difference between is and ==?
+is checks identity (whether two references point to the same object).
+== checks value equality (whether values are the same).
+is uses memory address comparison.
+Immutable objects may show is as True for same literals.
+
+5. How does Python manage memory?
+Python uses automatic garbage collection via reference counting.
+When reference count hits zero, memory is freed.
+Cyclic garbage collector handles circular references.
+Memory management is handled by private heap space.
